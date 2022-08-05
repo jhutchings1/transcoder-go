@@ -43,10 +43,10 @@ dockers:
   - goarch: amd64
     use: buildx
     image_templates:
-      - "ghcr.io/vilsol/transcoder-go:{{ .Tag }}"
-      - "ghcr.io/vilsol/transcoder-go:v{{ .Major }}"
-      - "ghcr.io/vilsol/transcoder-go:v{{ .Major }}.{{ .Minor }}"
-      - "ghcr.io/vilsol/transcoder-go:latest"
+      - "ghcr.io/jhutchings1/transcoder-go:{{ .Tag }}"
+      - "ghcr.io/jhutchings1/transcoder-go:v{{ .Major }}"
+      - "ghcr.io/jhutchings1/transcoder-go:v{{ .Major }}.{{ .Minor }}"
+      - "ghcr.io/jhutchings1/transcoder-go:latest"
     build_flag_templates:
       - "--pull"
       - "--label=org.opencontainers.image.created={{.Date}}"
@@ -56,10 +56,10 @@ dockers:
   - goarch: arm64
     use: buildx
     image_templates:
-      - "ghcr.io/vilsol/transcoder-go:{{ .Tag }}-arm64v8"
-      - "ghcr.io/vilsol/transcoder-go:v{{ .Major }}-arm64v8"
-      - "ghcr.io/vilsol/transcoder-go:v{{ .Major }}.{{ .Minor }}-arm64v8"
-      - "ghcr.io/vilsol/transcoder-go:latest-arm64v8"
+      - "ghcr.io/jhutchings1/transcoder-go:{{ .Tag }}-arm64v8"
+      - "ghcr.io/jhutchings1/transcoder-go:v{{ .Major }}-arm64v8"
+      - "ghcr.io/jhutchings1/transcoder-go:v{{ .Major }}.{{ .Minor }}-arm64v8"
+      - "ghcr.io/jhutchings1/transcoder-go:latest-arm64v8"
     build_flag_templates:
       - "--pull"
       - "--label=org.opencontainers.image.created={{.Date}}"
