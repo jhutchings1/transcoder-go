@@ -1,4 +1,4 @@
-FROM opencoconut/ffmpeg:latest
+FROM alfg/ffmpeg:latest
 
 RUN apk add --no-cache \
 	libtheora \
