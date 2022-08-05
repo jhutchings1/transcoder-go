@@ -10,7 +10,8 @@ RUN apk add --no-cache \
 	libvpx \
 	libstdc++ \
 	numactl \
-	nasm
+	nasm \
+	ffmpeg
 
 COPY transcoder-go /transcoder
 
