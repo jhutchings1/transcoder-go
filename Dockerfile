@@ -1,13 +1,4 @@
-FROM ghcr.io/vilsol/ffmpeg-alpine:latest as ffmpeg
-
-FROM alpine:edge
-
-# ffmpeg
-COPY --from=ffmpeg /root/bin/ffmpeg /bin/ffmpeg
-COPY --from=ffmpeg /root/bin/ffprobe /bin/ffprobe
-
-# x265
-COPY --from=ffmpeg /usr/local/ /usr/local/
+FROM jrottenberg/ffmpeg:latest
 
 RUN apk add --no-cache \
 	libtheora \
